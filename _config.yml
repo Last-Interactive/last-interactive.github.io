@@ -1,0 +1,27 @@
+title: Last Interactive
+author: rafaelcolladojr
+subtitle: We're a mobile app and indie game stuio based in New York City.
+
+url: "https://lastinteractive.com"
+baseurl: ""
+
+# profile-picture: assets/profile.png
+# favicon_location: assets/favicon.ico
+
+permalink: /:year-:month-:day-:title/
+
+highlighter: rouge
+
+navbar:
+  - name: "WORKS"
+    link: "/works/"
+  - name: "ABOUT"
+    link: "/about/"
+
+# Footer 
+footer_text: "Yes"
+footer_only_homepage: true
+
+github: "https://github.com/lastinteractive"
+x: "https://x.com/lastinteractive"
+instagram: "https://instagram.com/lastinteractive"

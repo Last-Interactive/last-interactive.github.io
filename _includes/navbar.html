@@ -1,0 +1,22 @@
+<div class="header">
+  <header>
+    <a href="{{ site.url }}{{ site.baseurl }}/">
+      <div id="site-logo" src="/assets/last-interactive-logo0.png">
+    </a>
+  </header>
+  <nav>
+    <ul>
+      {% for x in site.navbar %}
+      {% if x.absolute-link %}
+      {% assign x-url = x.absolute-link %}
+      {% else %}
+      {% assign x-url = x.link %}
+      {% endif %}
+      <li class="{% if page.url == x-url %}active{% endif %}">
+        <a href="{{ x-url }}">{{ x.name }}</a>
+      </li>
+      {% if forloop.last == false %}{% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

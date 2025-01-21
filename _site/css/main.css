@@ -1,0 +1,289 @@
+html,
+body {
+  height: 100%;
+  background-image: none;
+  background-position: top left;
+  background-size: auto;
+  background-attachment: scroll;
+  background-repeat: repeat;
+  background-color: #0c3734;
+  color: #f5eddb;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0 auto;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  line-height: 28px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 2em;
+}
+
+p {
+  margin-top: 1em;
+}
+
+a,
+a:visited {
+  color: #f5eddb;
+  text-decoration: none;
+}
+
+blockquote {
+  margin-top: 2em;
+  margin-left: -24px;
+  padding-left: 20px;
+  box-shadow: inset 3px 0 0 0 #494d64;
+}
+
+blockquote p {
+  font-style: italic;
+  font-weight: 200;
+}
+
+blockquote strong:nth-child(1) {
+  color: #494d64;
+}
+
+/* h6 = caption */
+h6 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 200;
+}
+
+em {
+  font-weight: 200;
+}
+
+#title-text-banner {
+  margin: 0 auto;
+  width: 600px;
+  height: 300px;
+  background: no-repeat center/80% url("/assets/last-interactive-title.png");
+}
+
+#site-logo {
+  width: 150px;
+  height: 200px;
+  margin-top: 24px;
+  background: no-repeat center/80% url("/assets/last-interactive-logo0.png");
+}
+
+#title>a {
+  color: black;
+}
+
+.site-title>h1 {
+  margin: 0 auto;
+}
+
+.recent-posts>h3 {
+  margin: 0 auto;
+}
+
+.recent-posts>ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 24px 0 24px;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 48px;
+  flex-grow: 1;
+}
+
+.content {
+  width: 100%;
+}
+
+/* Navigation */
+
+nav ul {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+nav ul li {
+  letter-spacing: 4px;
+}
+
+nav ul li>a {
+  color: #f5eddb;
+}
+
+nav ul li.active a,
+nav ul li.hover a {
+  color: #905e31 !important;
+}
+
+/* About */
+#about-section {
+  width: 550px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.quote-text {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.quote-ref {
+  margin: 16px 0 0 0;
+  text-align: end;
+}
+
+
+/* Footer */
+
+.footer {
+  display: flex;
+  margin: 24px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 0.8em;
+}
+
+#glider {
+  flex: 1 0 256px;
+  width: 16px;
+  height: 16px;
+  background: url("https://user-images.githubusercontent.com/7101404/154202000-86d49901-a42e-4025-b5ce-75c2b5da3e7c.png") bottom right no-repeat;
+  background-size: contain;
+}
+
+#copyright {
+  flex: 1 0 256px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+#socials {
+  flex: 1 0 256px;
+}
+
+@media (min-width: 768px) {
+  .recent-posts {
+    display: flex;
+  }
+
+  #glider {
+    background-position-x: center;
+  }
+
+  #copyright {
+    text-align: right;
+  }
+}
+
+/* Code snippets */
+pre,
+code {
+  display: block;
+  font-size: 1em;
+  line-height: 18px;
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  padding: 10px;
+  border-radius: 8px;
+  word-wrap: break-word;
+  white-space: pre;
+  overflow-x: auto;
+  overflow-wrap: break-word;
+}
+
+pre {
+  margin-top: 2em;
+}
+
+p code,
+h6 code {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: #363a4f;
+  vertical-align: middle;
+}
+
+.token.comment {
+  color: #6272a4;
+  font-style: italic;
+}
+
+.o,
+.o+.o,
+.o+.n,
+.n+.n,
+.n+.o {
+  /* Style contiguous .o and .n elements */
+  color: #a6adc8;
+  font-style: italic;
+}
+
+.n {
+  color: #b4befe;
+}
+
+.s1,
+.s2 {
+  color: #a6e3a1;
+}
+
+.nb {
+  color: #fab387;
+}
+
+.kc {
+  color: #fab387;
+}
