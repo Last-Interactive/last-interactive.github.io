@@ -8,9 +8,12 @@ body {
   background-repeat: repeat;
   background-color: #0c3734;
   color: #f5eddb;
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik";
   font-optical-sizing: auto;
+  font-size: 15px;
   font-style: normal;
+  font-weight: 300;
+  line-height: 19px;
 }
 
 body {
@@ -149,6 +152,7 @@ nav ul {
 
 nav ul li {
   letter-spacing: 4px;
+  font-size: 13px;
 }
 
 nav ul li>a {
@@ -172,7 +176,9 @@ nav ul li.hover a {
 }
 
 .quote-text {
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
   font-style: italic;
   font-size: 20px;
   font-weight: 500;
@@ -189,7 +195,7 @@ nav ul li.hover a {
 
 .footer {
   display: flex;
-  margin: 24px;
+  margin: 0 24px;
   flex-wrap: wrap;
   justify-content: space-between;
   font-size: 0.8em;
@@ -211,6 +217,8 @@ nav ul li.hover a {
 
 #socials {
   flex: 1 0 256px;
+  display: flex;
+  gap: 16px;
 }
 
 @media (min-width: 768px) {
@@ -225,6 +233,86 @@ nav ul li.hover a {
   #copyright {
     text-align: right;
   }
+}
+
+/* Works */
+.works-list {
+  width: 500px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.work-item {
+  display: flex;
+  gap: 36px;
+}
+
+.work-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.work-details>h2 {
+  margin: 0;
+}
+
+.work {
+  display: flex;
+  gap: 18px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.work-icon {
+  width: 30%;
+  border-radius: 25px;
+  padding: 2px !important;
+  background-color: #8dbab6;
+}
+
+.work-demo {
+
+  width: 36%;
+  padding: 2px !important;
+  background-color: #8dbab6;
+}
+
+.work-name {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 34px;
+}
+
+.work-downloads {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+  gap: 16px;
+  align-items: start;
+}
+
+.work-downloads-text {
+  margin: 0;
+}
+
+.work-download-links {
+  display: flex;
+  gap: 24px;
+}
+
+.app-store-icon {
+  height: 150px;
+  width: 150px;
+  background: no-repeat url("/assets/app-store-button.png");
+  background-size: 150px;
 }
 
 /* Code snippets */

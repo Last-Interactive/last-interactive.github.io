@@ -2,4 +2,17 @@
 layout: default
 title: Works
 ---
-<center>Coming soon</center>
+<div class="works-list">
+  {% for work in site.works %}
+  <a href="{{ work.url }}">
+    <div class="work-item">
+      <img class="work-icon" src="{{ work.icon }}">
+      <div class="work-details">
+
+        <h2>{{ work.name }}</h2>
+        <p>{{ work.summary }}</p>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>

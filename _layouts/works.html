@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+  <div class="container">
+    {% include navbar.html %}
+    <div class="body">
+      <div class="work-wrapper">
+        <div class="work">
+          <div class="work-info">
+            <img class="work-icon" src="{{ page.icon }}" ref="{{ page.name}}">
+            <p class="work-name">{{ page.name }}</p>
+            <div class="work-text">{{ content }}</div>
+          </div>
+          <img class="work-demo" src="{{ page.demo }}">
+        </div>
+        {% if page.app-store-link and page.play-store-link %}
+        {% assign dl-text = "Available on:" %}
+        {% elsif page.app-store-link or page.play-store-link %}
+        {% assign dl-text = "Exclusively available on:" %}
+        {% endif %}
+        {% if dl-text %}
+        <div class="work-downloads">
+          <p class="work-downloads-text">
+            {{ dl-text }}
+          </p>
+          <div class="work-download-links">
+            {% if page.app-store-link %}
+            <a href="{{ page.app-store-link }}">
+              <div class="app-store-icon"></div>
+            </a>
+            {% endif %}
+            {% if page.play-store-link %}
+            <a href="{{ page.play-store-link }}">
+              <div class="play-store-icon"></div>
+            </a>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% include footer.html %}
+  </div>
+</body>

@@ -25,3 +25,8 @@ footer_only_homepage: true
 github: "https://github.com/lastinteractive"
 x: "https://x.com/lastinteractive"
 instagram: "https://instagram.com/lastinteractive"
+
+# Works
+collections:
+  works:
+    output: true
