@@ -6,8 +6,8 @@ body {
   background-size: auto;
   background-attachment: scroll;
   background-repeat: repeat;
-  background-color: #0c3734;
-  color: #f5eddb;
+  background-color: #f5eddb;
+  color: #0c3734;
   font-family: "Rubik";
   font-optical-sizing: auto;
   font-size: 15px;
@@ -51,7 +51,7 @@ p>a:visited {
 
 a,
 a:visited {
-  color: #f5eddb;
+  color: #0c3734;
   text-decoration: none;
 }
 
@@ -87,7 +87,7 @@ em {
   margin: 0 auto;
   width: 600px;
   height: 300px;
-  background: no-repeat center/80% url("/assets/last-interactive-title.png");
+  background: no-repeat center/80% url("/assets/last-interactive-title2.png");
 }
 
 #site-logo {
