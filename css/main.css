@@ -6,8 +6,8 @@ body {
   background-size: auto;
   background-attachment: scroll;
   background-repeat: repeat;
-  background-color: #f5eddb;
-  color: #0c3734;
+  background-color: #0c3734;
+  color: #f5eddb;
   font-family: "Rubik";
   font-optical-sizing: auto;
   font-size: 15px;
@@ -51,7 +51,7 @@ p>a:visited {
 
 a,
 a:visited {
-  color: #0c3734;
+  color: #f5eddb;
   text-decoration: none;
 }
 
@@ -87,7 +87,7 @@ em {
   margin: 0 auto;
   width: 600px;
   height: 300px;
-  background: no-repeat center/80% url("/assets/last-interactive-title2.png");
+  background: no-repeat center/80% url("/assets/last-interactive-title0.png");
 }
 
 #site-logo {
@@ -318,6 +318,13 @@ nav ul li.hover a {
   width: 150px;
   background: no-repeat url("/assets/app-store-button.png");
   background-size: 150px;
+}
+
+.play-store-icon {
+  height: 190px;
+  width: 190px;
+  background: no-repeat url("/assets/app-store-button.png");
+  background-size: 190px;
 }
 
 /* Code snippets */
