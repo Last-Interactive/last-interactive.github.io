@@ -321,10 +321,10 @@ nav ul li.hover a {
 }
 
 .play-store-icon {
-  height: 190px;
-  width: 190px;
-  background: no-repeat url("/assets/app-store-button.png");
-  background-size: 190px;
+  height: 170px;
+  width: 170px;
+  background: no-repeat url("/assets/play-store-button.png");
+  background-size: 170px;
 }
 
 /* Code snippets */
