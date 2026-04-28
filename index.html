@@ -9,7 +9,7 @@ title: Home
 <section class="hero">
   <div class="seal-sticker">
     <span class="mark"></span>
-    <span class="ribbon">est · 2021</span>
+    <span class="ribbon">est · 2019</span>
   </div>
   <div class="hero-text">
     <h1>
@@ -19,12 +19,13 @@ title: Home
       software.
     </h1>
     <p class="lede">
-      Mobile applications and games, made slowly in&nbsp;New&nbsp;York&nbsp;City — since 2021.
+      Mobile applications and games, made slowly in&nbsp;New&nbsp;York&nbsp;City — since 2019.
     </p>
     <div class="hero-meta">
       <span>Currently shipping <em>Pitch Perfect</em></span>
       <span class="sep">·</span>
-      <span>Next up: Untitled №3</span>
+      {% assign next_up = site.works | where: "unreleased", true | first %}
+      <span>Next up: {{ next_up.name | default: "Untitled" }}</span>
     </div>
   </div>
 </section>
@@ -33,14 +34,16 @@ title: Home
 <section class="works-section" id="works">
   <header class="works-head">
     <h2><span class="sec">Section I</span> <em>Works</em></h2>
-    <span class="count">Three pieces</span>
+    <span class="count">{{ site.works.size }} pieces</span>
   </header>
 
   <div class="work-list">
     <span class="sticker flood s1">Now showing ↓</span>
 
+    {% assign released_works = site.works | where_exp: "w", "w.unreleased != true" | reverse %}
+    {% assign unreleased_first = site.works | where: "unreleased", true | first %}
     {% assign work_num = 0 %}
-    {% for work in site.works reversed %}
+    {% for work in released_works limit: 3 %}
     {% assign work_num = work_num | plus: 1 %}
     {% assign num_str = work_num | prepend: "0" | slice: -2, 2 %}
     <a class="work-item" href="{{ work.url }}">
@@ -56,16 +59,21 @@ title: Home
       {% if work.featured %}<span class="sticker s2">★ Featured</span>{% endif %}
     </a>
     {% endfor %}
-
+    {% if unreleased_first %}
+    {% assign work_num = work_num | plus: 1 %}
+    {% assign num_str = work_num | prepend: "0" | slice: -2, 2 %}
     <div class="work-item disabled">
-      <span class="num">№ 03</span>
-      <div class="icon placeholder"></div>
-      <div class="title-wrap">
-        <span class="title">Untitled</span>
-        <span class="blurb">A second arcade title. More soon.</span>
+      <span class="num">№ {{ num_str }}</span>
+      <div class="icon{% unless unreleased_first.icon %} placeholder{% endunless %}">
+        {% if unreleased_first.icon %}<img src="{{ unreleased_first.icon }}" alt="">{% endif %}
       </div>
-      <span class="meta">In production</span>
+      <div class="title-wrap">
+        <span class="title">{{ unreleased_first.name }}</span>
+        <span class="blurb">{{ unreleased_first.summary }}</span>
+      </div>
+      <span class="meta">{{ unreleased_first.meta | default: "In production" }}</span>
     </div>
+    {% endif %}
   </div>
 </section>
 

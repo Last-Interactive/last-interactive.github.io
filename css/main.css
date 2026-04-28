@@ -113,7 +113,8 @@ em { font-style: italic; }
   display: grid;
   grid-template-columns: 380px 1fr;
   gap: 56px;
-  align-items: end;
+  align-items: center;
+  justify-items: center;
 }
 
 .seal-sticker {
