@@ -863,3 +863,13 @@ p code, h6 code {
   .phone-tall { width: 240px; }
   .work-detail-head h1 { font-size: 56px; }
 }
+
+/* ─── Touch devices: hover states always active ──── */
+@media (hover: none) {
+  .seal-sticker { transform: rotate(-3deg) scale(1.02); }
+  .work-item:not(.disabled) { padding-left: 12px; }
+  .work-item:not(.disabled) .icon { transform: rotate(2deg) scale(1.05); }
+  .work-item:not(.disabled) .title { color: var(--flood); font-style: italic; }
+  .phone { transform: rotate(0deg) scale(1.02); }
+  .store-btn { transform: scale(1.04); }
+}
