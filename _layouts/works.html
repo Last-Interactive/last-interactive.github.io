@@ -4,44 +4,66 @@
 {% include head.html %}
 
 <body>
-  <div class="container">
+  <div class="zine">
     {% include navbar.html %}
-    <div class="body">
-      <div class="work-wrapper">
-        <div class="work">
-          <div class="work-info">
-            <img class="work-icon" src="{{ page.icon }}" ref="{{ page.name}}">
-            <p class="work-name">{{ page.name }}</p>
-            <div class="work-text">{{ content }}</div>
+
+    <section class="work-detail">
+      <header class="work-detail-head">
+        <span class="sec">Project</span>
+        <h1><em>{{ page.name }}</em></h1>
+        {% if page.meta %}<span class="work-detail-meta">{{ page.meta }}</span>{% endif %}
+      </header>
+
+      <div class="work-detail-grid">
+        <div class="work-detail-art">
+          {% if page.demo %}
+          <div class="phone phone-tall">
+            <div class="phone-inner">
+              <img class="phone-screen" src="{{ page.demo }}" alt="{{ page.name }} demo">
+            </div>
           </div>
-          <img class="work-demo" src="{{ page.demo }}">
+          {% endif %}
         </div>
-        {% if page.app-store-link and page.play-store-link %}
-        {% assign dl-text = "Available on:" %}
-        {% elsif page.app-store-link or page.play-store-link %}
-        {% assign dl-text = "Exclusively available on:" %}
-        {% endif %}
-        {% if dl-text %}
-        <div class="work-downloads">
-          <p class="work-downloads-text">
-            {{ dl-text }}
-          </p>
-          <div class="work-download-links">
-            {% if page.app-store-link %}
-            <a href="{{ page.app-store-link }}">
-              <div class="app-store-icon"></div>
-            </a>
-            {% endif %}
-            {% if page.play-store-link %}
-            <a href="{{ page.play-store-link }}">
-              <div class="play-store-icon"></div>
-            </a>
-            {% endif %}
+
+        <div class="work-detail-body">
+          {% if page.icon %}
+          <div class="work-detail-icon">
+            <img src="{{ page.icon }}" alt="{{ page.name }} icon">
           </div>
+          {% endif %}
+
+          <div class="work-detail-summary">{{ page.summary }}</div>
+
+          <div class="work-detail-content">
+            {{ content }}
+          </div>
+
+          {% if page.app-store-link or page.play-store-link %}
+          <div class="work-detail-downloads">
+            {% if page.app-store-link and page.play-store-link %}
+            <span class="dl-label">Available on:</span>
+            {% elsif page.app-store-link or page.play-store-link %}
+            <span class="dl-label">Exclusively available on:</span>
+            {% endif %}
+            <div class="work-download-links">
+              {% if page.app-store-link %}
+              <a class="store-btn" href="{{ page.app-store-link }}">
+                <img src="/assets/app-store-button.png" alt="Download on the App Store">
+              </a>
+              {% endif %}
+              {% if page.play-store-link %}
+              <a class="store-btn" href="{{ page.play-store-link }}">
+                <img src="/assets/play-store-button.png" alt="Get it on Google Play">
+              </a>
+              {% endif %}
+            </div>
+          </div>
+          {% endif %}
         </div>
-        {% endif %}
       </div>
-    </div>
+    </section>
+
     {% include footer.html %}
   </div>
 </body>
+</html>

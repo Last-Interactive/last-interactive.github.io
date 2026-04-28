@@ -2,7 +2,8 @@
 layout: works
 title: Above
 name: Above
-summary: "Challenge meets simplicity in this one-dimensional \"pick-up\" arcade mobile game.\nHow high can you go?"
+summary: "A pick-up arcade game about climbing higher than you should."
+meta: "iOS · 2024"
 icon: "/assets/above/above-icon.png"
 demo: "/assets/above/above-demo.gif"
 app-store-link: "https://apps.apple.com/us/app/above/id1535097129"

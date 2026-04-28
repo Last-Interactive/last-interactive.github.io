@@ -1,9 +1,27 @@
-<div class="footer">
-  <div id="socials">
-    <a href="{{ site.github }}">Github</a>
-    <a href="{{ site.x }}">X</a>
-    <a href="{{ site.instagram }}">Instagram</a>
+<footer class="colophon" id="contact">
+  <div class="coloph-top">
+    <div class="coloph-mark">
+      <span class="mark-sm"></span>
+    </div>
+    <div class="coloph-set">
+      <h4>Index</h4>
+      <a href="#works">Works</a>
+      <a href="#studio">Studio</a>
+    </div>
+    <div class="coloph-set">
+      <h4>Channels</h4>
+      {% if site.github %}<a href="{{ site.github }}">Github ↗</a>{% endif %}
+      {% if site.x %}<a href="{{ site.x }}">X ↗</a>{% endif %}
+      {% if site.instagram %}<a href="{{ site.instagram }}">Instagram ↗</a>{% endif %}
+    </div>
+    <div class="coloph-set">
+      <h4>Say hello</h4>
+      {% if site.email %}<a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
+      <span class="muted">Brooklyn, New York</span>
+    </div>
   </div>
-  <!-- <div id="glider"></div> -->
-  <div id="copyright">Last Interactive © All rights reserved.</div>
-</div>
+  <div class="coloph-bottom">
+    <span>© Last Interactive, 2021–2026</span>
+    <span class="muted">Set in Playfair Display, Rubik & JetBrains Mono. Printed on the web.</span>
+  </div>
+</footer>

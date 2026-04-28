@@ -1,6 +1,6 @@
 title: Last Interactive
 author: rafaelcolladojr
-subtitle: We're a mobile app and indie game stuio based in New York City.
+subtitle: "A two-person studio in Brooklyn making mobile applications and games. Since 2021."
 
 url: "https://lastinteractive.com"
 baseurl: ""
@@ -13,14 +13,12 @@ permalink: /:year-:month-:day-:title/
 highlighter: rouge
 
 navbar:
-  - name: "WORKS"
-    link: "/works/"
-  - name: "ABOUT"
-    link: "/about/"
+  - name: "Works"
+    link: "#works"
+  - name: "Studio"
+    link: "#studio"
 
-# Footer 
-footer_text: "Yes"
-footer_only_homepage: true
+email: "hello@lastinteractive.com"
 
 github: "https://github.com/lastinteractive"
 x: "https://x.com/lastinteractive"

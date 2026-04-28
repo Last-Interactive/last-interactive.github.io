@@ -2,8 +2,114 @@
 layout: default
 title: Home
 ---
-<div id="title-text-banner" alt="Last Interactive"></div>
 
-<center>
-  <p>We’re a mobile application and indie game studio based in New York City.</p>
-</center>
+<span class="issue-label">Vol. IV · '26</span>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="seal-sticker">
+    <span class="mark"></span>
+    <span class="ribbon">est · 2021</span>
+  </div>
+  <div class="hero-text">
+    <h1>
+      A <em>small</em><br/>
+      studio for<br/>
+      <span class="ul">impactful</span><br/>
+      software.
+    </h1>
+    <p class="lede">
+      Mobile applications and games, made slowly in&nbsp;New&nbsp;York&nbsp;City — since 2021.
+    </p>
+    <div class="hero-meta">
+      <span>Currently shipping <em>Pitch Perfect</em></span>
+      <span class="sep">·</span>
+      <span>Next up: Untitled №3</span>
+    </div>
+  </div>
+</section>
+
+<!-- Works -->
+<section class="works-section" id="works">
+  <header class="works-head">
+    <h2><span class="sec">Section I</span> <em>Works</em></h2>
+    <span class="count">Three pieces</span>
+  </header>
+
+  <div class="work-list">
+    <span class="sticker flood s1">Now showing ↓</span>
+
+    {% assign work_num = 0 %}
+    {% for work in site.works reversed %}
+    {% assign work_num = work_num | plus: 1 %}
+    {% assign num_str = work_num | prepend: "0" | slice: -2, 2 %}
+    <a class="work-item" href="{{ work.url }}">
+      <span class="num">№ {{ num_str }}</span>
+      <div class="icon">
+        {% if work.icon %}<img src="{{ work.icon }}" alt="">{% endif %}
+      </div>
+      <div class="title-wrap">
+        <span class="title">{{ work.name }}</span>
+        <span class="blurb">{{ work.summary }}</span>
+      </div>
+      <span class="meta">{{ work.meta | default: "iOS" }}</span>
+      {% if work.featured %}<span class="sticker s2">★ Featured</span>{% endif %}
+    </a>
+    {% endfor %}
+
+    <div class="work-item disabled">
+      <span class="num">№ 03</span>
+      <div class="icon placeholder"></div>
+      <div class="title-wrap">
+        <span class="title">Untitled</span>
+        <span class="blurb">A second arcade title. More soon.</span>
+      </div>
+      <span class="meta">In production</span>
+    </div>
+  </div>
+</section>
+
+<!-- Featured -->
+{% assign featured_work = site.works | where: "featured", true | first %}
+{% if featured_work %}
+<section class="featured" id="featured">
+  <div class="featured-grid">
+    <div class="featured-art">
+      <div class="phone">
+        <div class="phone-inner">
+          <img src="{{ featured_work.demo }}" alt="{{ featured_work.name }} demo" class="phone-screen">
+        </div>
+      </div>
+    </div>
+    <div class="featured-text">
+      <span class="kicker">A closer look · {{ featured_work.meta }}</span>
+      <h3 class="featured-title">{{ featured_work.name }}</h3>
+      <p class="body">{{ featured_work.summary }}</p>
+      <div class="body">{{ featured_work.content }}</div>
+      <a class="cta" href="{{ featured_work.url }}">View project →</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Studio -->
+<section class="studio" id="studio">
+  <div class="studio-grid">
+    <div class="studio-label">
+      <span class="sec">Section II</span>
+      <h3><em>From the studio</em></h3>
+    </div>
+    <div class="studio-body">
+      <p class="drop">
+        Last Interactive is two people in Brooklyn making mobile software
+        we'd want to use ourselves. We design, build, and ship every screen.
+        No ads, no investors, no shortcuts.
+      </p>
+      <p>
+        If you'd like to work with us — or just say hi — we read every
+        email at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
+      </p>
+      <p class="sig">— The studio</p>
+    </div>
+  </div>
+</section>

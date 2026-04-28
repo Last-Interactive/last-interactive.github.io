@@ -1,22 +1,18 @@
-<div class="header">
-  <header>
+<header class="nav">
+  <div class="nav-left">
     <a href="{{ site.url }}{{ site.baseurl }}/">
-      <div id="site-logo"></div>
+      <span>Last Interactive</span>
     </a>
-  </header>
-  <nav>
-    <ul>
-      {% for x in site.navbar %}
-      {% if x.absolute-link %}
-      {% assign x-url = x.absolute-link %}
-      {% else %}
-      {% assign x-url = x.link %}
-      {% endif %}
-      <li class="{% if page.url == x-url %}active{% endif %}">
-        <a href="{{ x-url }}">{{ x.name }}</a>
-      </li>
-      {% if forloop.last == false %}{% endif %}
-      {% endfor %}
-    </ul>
+    <span class="dot">·</span>
+    <span class="hide-small">Brooklyn, NY · Est. MMXXI</span>
+  </div>
+  <nav class="nav-right">
+    {% for x in site.navbar %}
+    <a href="{{ x.link }}">{{ x.name }}</a>
+    {% endfor %}
+    {% if site.email %}
+    <a href="mailto:{{ site.email }}">Contact ↗</a>
+    {% endif %}
   </nav>
-</div>
+</header>
+<div class="torn" aria-hidden="true"></div>

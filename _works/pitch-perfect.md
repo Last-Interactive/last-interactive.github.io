@@ -2,7 +2,9 @@
 layout: works
 title: "Pitch Perfect"
 name: "Pitch Perfect"
-summary: "Perfect Japanese pitch accent at your fingertips"
+summary: "A drilling tool for Japanese pitch accent — by ear, in minutes a day."
+meta: "iOS · 2025"
+featured: true
 icon: "/assets/pitchperfect/pitch-perfect-icon.png"
 demo: "/assets/pitchperfect/pitch-perfect-demo.gif"
 app-store-link: "https://apps.apple.com/us/app/pitch-perfect-pocket-accent/id6741011029"
