@@ -2,7 +2,7 @@
 layout: default
 title: "Privacy Policy"
 ---
-The services built by Last Interactive are provided at no cost and is intended for use as is.  
+The services built by Last Interactive are intended for use as is. Some are offered free of charge, while others may offer paid features, in-app purchases, or auto-renewing subscriptions.  
 
 This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Services.  
 
@@ -24,6 +24,18 @@ We want to inform you that whenever you use our Service, in a case of an error i
 Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.  
 
 This Service does not use these “cookies” explicitly. However, the app may use third party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.  
+
+### Subscriptions and In-App Purchases  
+Certain apps offered by Last Interactive include in-app purchases or auto-renewing subscriptions. All billing for these purchases is processed exclusively by the Apple App Store or Google Play, in accordance with their respective terms. Last Interactive does not receive, see, or store your payment card, bank account, or other financial account information at any time.
+
+When you complete a purchase or start a subscription, the App Store or Play Store provides us with a purchase receipt and a transaction identifier so that we can verify the purchase and unlock the corresponding content or features in the app. We may also record anonymized purchase events (such as the product purchased, the date of purchase, and whether a subscription is active, canceled, or expired) for the purpose of providing the Service, preventing fraud, and understanding aggregate usage. We do not link these records to your real-world identity.
+
+Auto-renewing subscriptions automatically renew at the end of each billing period unless you cancel at least 24 hours before the end of the current period. You can manage or cancel your subscription at any time through your App Store or Google Play account settings:
+
+- iOS: **Settings → [your name] → Subscriptions**  
+- Android: **Google Play Store → Profile → Payments and subscriptions → Subscriptions**  
+
+Refund requests are handled by Apple and Google under their respective policies; Last Interactive cannot directly issue refunds for store-processed transactions.
 
 ### Service Providers  
 We may employ third-party companies and individuals due to the following reasons:  
@@ -47,4 +59,4 @@ These Services do not address anyone under the age of 13. We do not knowingly co
 We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.  
 
 ### Contact Us  
-If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at [contactus@lastinterative.com](mailto:contactus@lastinteractive.com).  
+If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at [contactus@lastinteractive.com](mailto:contactus@lastinteractive.com).  
