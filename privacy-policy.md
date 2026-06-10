@@ -1,7 +1,17 @@
 ---
 layout: default
 title: "Privacy Policy"
+effective: "June 2026"
 ---
+<article class="legal">
+  <header class="legal-head">
+    <span class="sec">§ Legal</span>
+    <h1>Privacy <em>Policy</em></h1>
+    <span class="legal-meta">Effective {{ page.effective }} · Last Interactive</span>
+  </header>
+
+  <div class="legal-body" markdown="1">
+
 The services built by Last Interactive are intended for use as is. Some are offered free of charge, while others may offer paid features, in-app purchases, or auto-renewing subscriptions.  
 
 This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Services.  
@@ -60,3 +70,6 @@ We may update our Privacy Policy from time to time. Thus, you are advised to rev
 
 ### Contact Us  
 If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at [contactus@lastinteractive.com](mailto:contactus@lastinteractive.com).  
+
+  </div>
+</article>
